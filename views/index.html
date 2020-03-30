@@ -1,0 +1,26 @@
+{{ define "index"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>在线 IM 聊天室</title>
+    <link rel="stylesheet" href="/statics/css/base.css">
+</head>
+<body>
+    <h1 style="width: 80%;margin: 30px auto">在线 IM 聊天室</h1>
+    <div style="width: 80%;margin: 10px auto">
+        <input type="hidden" id="UUID" placeholder="请输入接收消息的UUID" />
+        <textarea id="content-value" cols="30" rows="10" placeholder="说点什么吧..."></textarea>
+        <button onclick="send()">发送</button>
+    </div>
+    <div class="im-content">
+        <div class="content" id="content"></div>
+        <div class="user-list">
+            <div class="title">在线用户</div>
+            <ul id="user-list"></ul>
+        </div>
+    </div>
+    <script src="/statics/js/websocket.js"></script>
+</body>
+</html>
+{{ end }}
